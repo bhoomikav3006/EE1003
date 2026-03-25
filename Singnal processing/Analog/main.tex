@@ -1,0 +1,151 @@
+
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{circuitikz}
+\usepackage{tikz}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+%------------------------------------------------------------
+\title{Signal Processing-Analog}
+\date{March 25, 2026}
+
+\author 
+{Bhoomika V - EE25BTECH11015}
+
+%------------------------------------------------------------
+
+\begin{document}
+
+\frame{\titlepage}
+
+%------------------------------------------------------------
+\begin{frame}{Question}
+Two series resonant filters are shown in the figure.
+
+\begin{itemize}
+\item Filter 1 bandwidth = $B_1$
+\item Filter 2 bandwidth = $B_2$
+\end{itemize}
+
+Given:
+\[
+C_2 = 4C_1, \quad L_2 = \frac{L_1}{4}
+\]
+
+Find:
+\[
+\frac{B_1}{B_2}
+\]
+
+\hfill (EC 2007)
+\end{frame}
+
+%------------------------------------------------------------
+\begin{frame}{Theoretical Background}
+For a \textbf{series RLC resonant circuit}, the bandwidth is:
+
+\[
+B = \frac{R}{L}
+\]
+
+\begin{itemize}
+\item Bandwidth depends only on:
+\begin{itemize}
+\item Resistance ($R$)
+\item Inductance ($L$)
+\end{itemize}
+
+\item It is \textbf{independent of capacitance}
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------------------
+\begin{frame}{Filter 1 Analysis}
+For Filter 1:
+
+\[
+B_1 = \frac{R}{L_1}
+\]
+
+\begin{itemize}
+\item $R$ is same for both filters
+\item Inductance is $L_1$
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------------------
+\begin{frame}{Filter 2 Analysis}
+Given:
+
+\[
+L_2 = \frac{L_1}{4}
+\]
+
+Bandwidth:
+
+\[
+B_2 = \frac{R}{L_2}
+\]
+
+Substituting:
+
+\[
+B_2 = \frac{R}{L_1/4}
+\]
+
+\[
+B_2 = \frac{4R}{L_1}
+\]
+
+\end{frame}
+
+%------------------------------------------------------------
+\begin{frame}{Ratio Calculation}
+
+\[
+\frac{B_1}{B_2} = \frac{R/L_1}{4R/L_1}
+\]
+
+Canceling common terms:
+
+\[
+\frac{B_1}{B_2} = \frac{1}{4}
+\]
+
+\end{frame}
+
+%------------------------------------------------------------
+\begin{frame}{Important Insight}
+
+\begin{itemize}
+\item Capacitance change does NOT affect bandwidth
+\item Only inductance scaling matters:
+\begin{itemize}
+\item $L \downarrow \Rightarrow B \uparrow$
+\end{itemize}
+\item Since $L_2 = L_1/4$, bandwidth increases 4 times
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------------------
+\begin{frame}{Final Answer}
+
+\[
+\boxed{\frac{B_1}{B_2} = \frac{1}{4}}
+\]
+
+\end{frame}
+
+%------------------------------------------------------------
+
+\end{document}
